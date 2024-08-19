@@ -21,11 +21,12 @@ jobs:
           npm run build
   unit-tests:
     runs-on: ubuntu-latest
-    steps: "running unit tests"  
+    steps:  
       - name: "failing tests"
-        echo "running tests"
-        if: ${{ !inputs.pass-unit-tests }}
-        exit 1
+        run:
+          echo "running tests"
+          if: ${{ !inputs.pass-unit-tests }}
+            exit 1
   deploy-nonprod:
     runs-on: ubuntu-latest
     - name: "deploy-non-prod"
