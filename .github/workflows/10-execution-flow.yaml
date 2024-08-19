@@ -41,7 +41,7 @@ jobs:
     needs:
       - deploy-nonprod
     steps:
-      - name "running e2e tests"
+      - name: "running e2e tests"
         run: 
           echo "runnning e2e tests"    
   load-tests:
